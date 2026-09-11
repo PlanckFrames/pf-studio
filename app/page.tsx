@@ -56,13 +56,16 @@ export default function HomePage() {
     <>
       <div className="sky" />
       <div className="wrap">
-        <header>
-          <a className="brand" href="/">
-            <span className="brand-mark">PlanckFrames</span>
-            <span className="brand-sub">PFStudio</span>
-          </a>
-          <nav>
-            <a href="#work">Work</a>
+        <section className="hero">
+          <h1>
+            PlanckFrames <em>studio</em>
+            <span>PFStudio</span>
+          </h1>
+          <p className="lede">
+            Apps at the edge of documents, data, and markets. Built in the
+            open, shipped on Vercel.
+          </p>
+          <nav className="hero-links">
             <a href="https://x.com/PlanckFrames" target="_blank" rel="noreferrer">
               X
             </a>
@@ -70,18 +73,6 @@ export default function HomePage() {
               GitHub
             </a>
           </nav>
-        </header>
-
-        <section className="hero">
-          <p className="kicker">Studio</p>
-          <h1>
-            PlanckFrames
-            <span>PFStudio</span>
-          </h1>
-          <p className="lede">
-            Apps at the edge of documents, data, and markets. Built in the
-            open, shipped on Vercel.
-          </p>
         </section>
 
         <section id="work">
