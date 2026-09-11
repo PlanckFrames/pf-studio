@@ -58,7 +58,7 @@ export default function HomePage() {
       <div className="wrap">
         <section className="hero">
           <h1>
-            PlanckFrames <em>studio</em>
+            PlanckFrames <em>Studio</em>
             <span>PFStudio</span>
           </h1>
           <p className="lede">
