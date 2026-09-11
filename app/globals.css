@@ -141,12 +141,11 @@ h1 span {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
 .card {
-  grid-column: span 4;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 40%), var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -273,10 +272,41 @@ footer a:hover {
   color: var(--text);
 }
 
-@media (max-width: 900px) {
-  .card {
-    grid-column: span 6;
+@media (min-width: 641px) and (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "foliosyne sablepane"
+      "galaxy graphisdatum"
+      "chains pies";
   }
+
+  .card {
+    min-height: 0;
+  }
+
+  .card-foliosyne { grid-area: foliosyne; }
+  .card-sablepane { grid-area: sablepane; }
+  .card-graphisdatum { grid-area: graphisdatum; }
+  .card-galaxy { grid-area: galaxy; }
+  .card-chains { grid-area: chains; }
+  .card-pies { grid-area: pies; }
+}
+
+@media (min-width: 901px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "foliosyne sablepane galaxy"
+      "chains graphisdatum pies";
+  }
+
+  .card-foliosyne { grid-area: foliosyne; }
+  .card-sablepane { grid-area: sablepane; }
+  .card-graphisdatum { grid-area: graphisdatum; }
+  .card-galaxy { grid-area: galaxy; }
+  .card-chains { grid-area: chains; }
+  .card-pies { grid-area: pies; }
 }
 
 @media (max-width: 640px) {
@@ -289,7 +319,6 @@ footer a:hover {
   }
 
   .card {
-    grid-column: span 12;
     min-height: 0;
   }
 

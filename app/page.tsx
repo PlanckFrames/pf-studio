@@ -1,5 +1,6 @@
 const projects = [
   {
+    id: "foliosyne",
     name: "Foliosyne",
     glyph: "F",
     tone: "gold",
@@ -10,6 +11,7 @@ const projects = [
     repo: "https://github.com/PlanckFrames/foliosyne",
   },
   {
+    id: "sablepane",
     name: "Sablepane",
     glyph: "S",
     tone: "gold",
@@ -20,6 +22,7 @@ const projects = [
     repo: "https://github.com/PlanckFrames/sablepane",
   },
   {
+    id: "graphisdatum",
     name: "GraphisDatum",
     glyph: "D",
     tone: "gold",
@@ -30,6 +33,7 @@ const projects = [
     repo: "https://github.com/PlanckFrames/GraphisDatum",
   },
   {
+    id: "galaxy",
     name: "Crypto Galaxy",
     glyph: "G",
     tone: "cyan",
@@ -40,6 +44,7 @@ const projects = [
     repo: "https://github.com/PlanckFrames/CryptoGalaxy",
   },
   {
+    id: "chains",
     name: "Crypto Chains",
     glyph: "C",
     tone: "cyan",
@@ -50,6 +55,7 @@ const projects = [
     repo: "https://github.com/PlanckFrames/CryptoChains",
   },
   {
+    id: "pies",
     name: "Crypto Pies",
     glyph: "P",
     tone: "cyan",
@@ -92,7 +98,7 @@ export default function HomePage() {
           </div>
           <div className="grid">
             {projects.map((project, i) => (
-              <article className="card" key={project.name}>
+              <article className={`card card-${project.id}`} key={project.name}>
                 <div className="card-top">
                   <div className={`glyph ${project.tone === "cyan" ? "cyan" : ""}`}>
                     {project.glyph}
