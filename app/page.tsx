@@ -20,6 +20,16 @@ const projects = [
     repo: "https://github.com/PlanckFrames/sablepane",
   },
   {
+    name: "GraphisDatum",
+    glyph: "D",
+    tone: "gold",
+    blurb:
+      "Scientific graphing in the browser. Workbooks, 20+ plot types, curve fitting, peak tools, and export to PDF, PNG, and CSV.",
+    tags: ["Science", "Graphing", "Analysis"],
+    href: "https://graphis-datum.vercel.app",
+    repo: "https://github.com/PlanckFrames/GraphisDatum",
+  },
+  {
     name: "Crypto Galaxy",
     glyph: "G",
     tone: "cyan",
@@ -78,7 +88,7 @@ export default function HomePage() {
         <section id="work">
           <div className="section-head">
             <h2>Selected work</h2>
-            <p>Five live apps</p>
+            <p>Six live apps</p>
           </div>
           <div className="grid">
             {projects.map((project, i) => (
