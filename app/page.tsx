@@ -81,14 +81,6 @@ export default function HomePage() {
             Apps at the edge of documents, data, and markets. Built in the
             open, shipped on Vercel.
           </p>
-          <nav className="hero-links">
-            <a href="https://x.com/PlanckFrames" target="_blank" rel="noreferrer">
-              X
-            </a>
-            <a href="https://github.com/PlanckFrames" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </nav>
         </section>
 
         <section id="work">
