@@ -75,7 +75,6 @@ export default function HomePage() {
         <section className="hero">
           <h1>
             PlanckFrames <em>Studio</em>
-            <span>PFStudio</span>
           </h1>
           <p className="lede">
             Apps at the edge of documents, data, and markets. Built in the
@@ -120,16 +119,10 @@ export default function HomePage() {
         </section>
 
         <footer>
-          <span>PlanckFrames (PFStudio)</span>
-          <span>
-            <a href="https://x.com/PlanckFrames" target="_blank" rel="noreferrer">
-              @PlanckFrames
-            </a>
-            {" · "}
-            <a href="https://github.com/PlanckFrames/pf-studio" target="_blank" rel="noreferrer">
-              Site source
-            </a>
-          </span>
+          <span>PlanckFrames</span>
+          <a href="https://github.com/PlanckFrames/pf-studio" target="_blank" rel="noreferrer">
+            Site source
+          </a>
         </footer>
       </div>
     </>
