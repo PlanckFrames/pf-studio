@@ -139,6 +139,10 @@ h1 span {
   padding-top: 22px;
 }
 
+.band + .band {
+  margin-top: 28px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -150,7 +154,6 @@ h1 span {
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 22px 22px 20px;
-  min-height: 280px;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
@@ -162,44 +165,23 @@ h1 span {
   background: var(--card-hover);
 }
 
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 28px;
-}
-
-.glyph {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: 20px;
-  background: rgba(215, 179, 122, 0.1);
-  color: var(--gold);
-  border: 1px solid rgba(215, 179, 122, 0.18);
-}
-
-.glyph.cyan {
-  background: rgba(126, 184, 196, 0.1);
-  color: #9fd0d8;
-  border-color: rgba(126, 184, 196, 0.2);
-}
-
-.index {
-  font-size: 12px;
-  color: var(--faint);
-  letter-spacing: 0.12em;
-}
-
 .card h3 {
   font-family: var(--font-serif), Georgia, serif;
   font-size: 28px;
   font-weight: 400;
   letter-spacing: -0.02em;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.shot {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  margin-bottom: 14px;
+  background: #05060a;
 }
 
 .card p {
@@ -272,41 +254,16 @@ footer a:hover {
   color: var(--text);
 }
 
-@media (min-width: 641px) and (max-width: 900px) {
+@media (min-width: 641px) {
   .grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "foliosyne sablepane"
-      "galaxy graphisdatum"
-      "chains pies";
   }
-
-  .card {
-    min-height: 0;
-  }
-
-  .card-foliosyne { grid-area: foliosyne; }
-  .card-sablepane { grid-area: sablepane; }
-  .card-graphisdatum { grid-area: graphisdatum; }
-  .card-galaxy { grid-area: galaxy; }
-  .card-chains { grid-area: chains; }
-  .card-pies { grid-area: pies; }
 }
 
 @media (min-width: 901px) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "foliosyne sablepane galaxy"
-      "chains graphisdatum pies";
   }
-
-  .card-foliosyne { grid-area: foliosyne; }
-  .card-sablepane { grid-area: sablepane; }
-  .card-graphisdatum { grid-area: graphisdatum; }
-  .card-galaxy { grid-area: galaxy; }
-  .card-chains { grid-area: chains; }
-  .card-pies { grid-area: pies; }
 }
 
 @media (max-width: 640px) {

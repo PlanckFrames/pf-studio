@@ -1,69 +1,97 @@
-const projects = [
+const sections = [
   {
-    id: "foliosyne",
-    name: "Foliosyne",
-    glyph: "F",
-    tone: "gold",
-    blurb:
-      "A quieter studio for serious documents. Read, edit, protect, and share PDFs, Word files, and Google Docs in the browser.",
-    tags: ["Documents", "PDF", "Studio"],
-    href: "https://foliosyne.vercel.app",
-    repo: "https://github.com/PlanckFrames/foliosyne",
+    id: "cheminformatics",
+    title: "Cheminformatics",
+    projects: [
+      {
+        id: "halden",
+        name: "Halden",
+        shot: "/shots/halden.jpg",
+        blurb:
+          "A molecular workbench in the browser. Draw a structure, freeze atoms, relax the rest with Python UFF, and export to Gaussian, Q-Chem, ADF, NWChem, ORCA, and VASP.",
+        tags: ["Molecules", "UFF", "Export"],
+        href: "https://halden-lilac.vercel.app",
+        repo: "https://github.com/PlanckFrames/halden",
+      },
+    ],
   },
   {
-    id: "sablepane",
-    name: "Sablepane",
-    glyph: "S",
-    tone: "gold",
-    blurb:
-      "Visual analytics without the noise. Build charts, boards, and views from the fields in front of you.",
-    tags: ["Analytics", "Charts", "Data"],
-    href: "https://sablepane.vercel.app",
-    repo: "https://github.com/PlanckFrames/sablepane",
+    id: "analytics",
+    title: "Data Analytics",
+    projects: [
+      {
+        id: "graphisdatum",
+        name: "GraphisDatum",
+        shot: "/shots/graphisdatum.jpg",
+        blurb:
+          "Scientific graphing in the browser. Workbooks, 20+ plot types, curve fitting, peak tools, and export to PDF, PNG, and CSV.",
+        tags: ["Science", "Graphing", "Analysis"],
+        href: "https://graphis-datum.vercel.app",
+        repo: "https://github.com/PlanckFrames/GraphisDatum",
+      },
+      {
+        id: "sablepane",
+        name: "Sablepane",
+        shot: "/shots/sablepane.jpg",
+        blurb:
+          "Visual analytics without the noise. Build charts, boards, and views from the fields in front of you.",
+        tags: ["Analytics", "Charts", "Data"],
+        href: "https://sablepane.vercel.app",
+        repo: "https://github.com/PlanckFrames/sablepane",
+      },
+    ],
   },
   {
-    id: "graphisdatum",
-    name: "GraphisDatum",
-    glyph: "D",
-    tone: "gold",
-    blurb:
-      "Scientific graphing in the browser. Workbooks, 20+ plot types, curve fitting, peak tools, and export to PDF, PNG, and CSV.",
-    tags: ["Science", "Graphing", "Analysis"],
-    href: "https://graphis-datum.vercel.app",
-    repo: "https://github.com/PlanckFrames/GraphisDatum",
+    id: "editorial",
+    title: "Editorial",
+    projects: [
+      {
+        id: "foliosyne",
+        name: "Foliosyne",
+        shot: "/shots/foliosyne.jpg",
+        blurb:
+          "A quieter studio for serious documents. Read, edit, protect, and share PDFs, Word files, and Google Docs in the browser.",
+        tags: ["Documents", "PDF", "Studio"],
+        href: "https://foliosyne.vercel.app",
+        repo: "https://github.com/PlanckFrames/foliosyne",
+      },
+    ],
   },
   {
-    id: "galaxy",
-    name: "Crypto Galaxy",
-    glyph: "G",
-    tone: "cyan",
-    blurb:
-      "Live market caps as a galaxy. Coins become bodies in space — rank, change, volume, and mass at a glance.",
-    tags: ["Crypto", "Visualization", "Markets"],
-    href: "https://crypto-galaxy-omega.vercel.app",
-    repo: "https://github.com/PlanckFrames/CryptoGalaxy",
-  },
-  {
-    id: "chains",
-    name: "Crypto Chains",
-    glyph: "C",
-    tone: "cyan",
-    blurb:
-      "Public Layer 2 metrics from Blockscout. Transactions, block time, explorers, and chain posture over a chosen window.",
-    tags: ["L2", "Metrics", "Infra"],
-    href: "https://crypto-chains-chi.vercel.app",
-    repo: "https://github.com/PlanckFrames/CryptoChains",
-  },
-  {
-    id: "pies",
-    name: "Crypto Pies",
-    glyph: "P",
-    tone: "cyan",
-    blurb:
-      "Market slices as pies. Allocation, share, and composition for the crypto universe you actually watch.",
-    tags: ["Crypto", "Allocation", "Charts"],
-    href: "https://crypto-pies.vercel.app",
-    repo: "https://github.com/PlanckFrames/crypto-pies",
+    id: "blockchain",
+    title: "Blockchain",
+    projects: [
+      {
+        id: "galaxy",
+        name: "Crypto Galaxy",
+        shot: "/shots/galaxy.jpg",
+        blurb:
+          "Live market caps as a galaxy. Coins become bodies in space — rank, change, volume, and mass at a glance.",
+        tags: ["Crypto", "Visualization", "Markets"],
+        href: "https://crypto-galaxy-omega.vercel.app",
+        repo: "https://github.com/PlanckFrames/CryptoGalaxy",
+      },
+      {
+        id: "chains",
+        name: "Crypto Chains",
+        shot: "/shots/chains.jpg",
+        blurb:
+          "Public Layer 2 metrics from Blockscout. Transactions, block time, explorers, and chain posture over a chosen window.",
+        tags: ["L2", "Metrics", "Infra"],
+        href: "https://crypto-chains-chi.vercel.app",
+        repo: "https://github.com/PlanckFrames/CryptoChains",
+      },
+      {
+        id: "pies",
+        name: "Crypto Pies",
+        shot: "/shots/pies.jpg",
+        blurb:
+          "Market slices as pies. Allocation, share, and composition for the crypto universe you actually watch.",
+        tags: ["Crypto", "Allocation", "Charts"],
+        href: "https://crypto-pies.vercel.app",
+        repo: "https://github.com/PlanckFrames/crypto-pies",
+      },
+    ],
   },
 ];
 
@@ -82,41 +110,37 @@ export default function HomePage() {
           </p>
         </section>
 
-        <section id="work">
-          <div className="section-head">
-            <h2>Selected work</h2>
-            <p>Six live apps</p>
-          </div>
-          <div className="grid">
-            {projects.map((project, i) => (
-              <article className={`card card-${project.id}`} key={project.name}>
-                <div className="card-top">
-                  <div className={`glyph ${project.tone === "cyan" ? "cyan" : ""}`}>
-                    {project.glyph}
+        {sections.map((section) => (
+          <section className="band" id={section.id} key={section.id}>
+            <div className="section-head">
+              <h2>{section.title}</h2>
+            </div>
+            <div className="grid">
+              {section.projects.map((project) => (
+                <article className="card" key={project.id}>
+                  <h3>{project.name}</h3>
+                  <img className="shot" src={project.shot} alt={`${project.name} opening screen`} />
+                  <p>{project.blurb}</p>
+                  <div className="tags">
+                    {project.tags.map((tag) => (
+                      <span className="tag" key={tag}>
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <span className="index">0{i + 1}</span>
-                </div>
-                <h3>{project.name}</h3>
-                <p>{project.blurb}</p>
-                <div className="tags">
-                  {project.tags.map((tag) => (
-                    <span className="tag" key={tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="actions">
-                  <a className="btn primary" href={project.href} target="_blank" rel="noreferrer">
-                    Open app
-                  </a>
-                  <a className="btn" href={project.repo} target="_blank" rel="noreferrer">
-                    GitHub
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+                  <div className="actions">
+                    <a className="btn primary" href={project.href} target="_blank" rel="noreferrer">
+                      Open app
+                    </a>
+                    <a className="btn" href={project.repo} target="_blank" rel="noreferrer">
+                      GitHub
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
 
         <footer>
           <span>PlanckFrames</span>
