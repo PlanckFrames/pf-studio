@@ -20,6 +20,16 @@ const sections = [
     title: "Data Analytics",
     projects: [
       {
+        id: "foliopatent",
+        name: "FolioPatent",
+        shot: "/shots/foliopatent.jpg",
+        blurb:
+          "Full patent analysis in the browser. Look up a publication or upload a PDF for inventors, owners, claims, chemistry, organisms, and translation.",
+        tags: ["Patents", "Claims", "Chemistry"],
+        href: "https://foliopatent.vercel.app",
+        repo: "https://github.com/PlanckFrames/foliopatent",
+      },
+      {
         id: "graphisdatum",
         name: "GraphisDatum",
         shot: "/shots/graphisdatum.jpg",
