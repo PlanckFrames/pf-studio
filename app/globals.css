@@ -125,11 +125,11 @@ h1 span {
 }
 
 .section-head h2 {
-  font-size: 13px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--faint);
-  font-weight: 600;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--text);
   padding-top: 22px;
 }
 

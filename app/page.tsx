@@ -120,10 +120,12 @@ export default function HomePage() {
           </p>
         </section>
 
-        {sections.map((section) => (
+        {sections.map((section, index) => (
           <section className="band" id={section.id} key={section.id}>
             <div className="section-head">
-              <h2>{section.title}</h2>
+              <h2>
+                {index + 1}. {section.title}
+              </h2>
             </div>
             <div className="grid">
               {section.projects.map((project) => (
